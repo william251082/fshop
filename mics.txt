@@ -2,3 +2,5 @@ npm install --save helmet
 npm run start:dev
 
 npm install --save compression
+npm install --save morgan
+https://blog.risingstack.com/node-js-logging-tutorial/
