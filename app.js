@@ -14,6 +14,8 @@ const User = require('./models/user');
 
 console.log(process.env.NODE_ENV);
 
+const MONGODB_URI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0-shard-00-00-yiuhx.mongodb.net:27017,cluster0-shard-00-01-yiuhx.mongodb.net:27017,cluster0-shard-00-02-yiuhx.mongodb.net:27017/${process.env.MONGO_DEFAULT_DATABASE}?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority`;
+
 const app = express();
 const store = new MongoDBStore({
   uri: MONGODB_URI,
@@ -111,7 +113,7 @@ app.use((error, req, res, next) => {
 mongoose
   .connect(MONGODB_URI)
   .then(result => {
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
   })
   .catch(err => {
     console.log(err);
