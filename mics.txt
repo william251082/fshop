@@ -9,3 +9,6 @@ openssl req -nodes -new -x509 -keyout server.key -out server.cert
 use n: localhost
 private key: server.key will stay on server
 server.cert will stay on client
+
+Full Node.js Deployment - NGINX, SSL With Lets Encrypt
+https://www.youtube.com/watch?v=oykl1Ih9pMg
