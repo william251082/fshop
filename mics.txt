@@ -1,2 +1,4 @@
-npm install helmet --save
+npm install --save helmet
 npm run start:dev
+
+npm install --save compression
