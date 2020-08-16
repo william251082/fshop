@@ -1,0 +1,7 @@
+./node_modules
+./.idea
+./.vscode
+./config/*
+nodemon.json
+./data
+dont_push.txt
